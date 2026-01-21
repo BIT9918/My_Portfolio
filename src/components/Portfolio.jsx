@@ -3,7 +3,7 @@ import React from "react";
 // IMPORT PROJECT IMAGES
 import BurgerKing from "../assets/img/BurgerKing.png";
 import FoodShop from "../assets/img/FoodShop.png";
-// import BIT from "../assets/img/BIT.png";
+import Img from "../assets/img/Screenshot 2026-01-21 192105.png"
 
 function Portfolio() {
   return (
@@ -66,9 +66,9 @@ function Portfolio() {
         </div>
 
         {/* MY CV (LIVE) */}
-        {/* <div className="rounded-xl overflow-hidden bg-[#1f232d] shadow-lg hover:scale-105 transition">
+        <div className="rounded-xl overflow-hidden bg-[#1f232d] shadow-lg hover:scale-105 transition">
           <img
-            src={BIT}
+            src={Img}
             alt="My CV Project"
             className="w-full h-[180px] md:h-[200px] object-cover"
           />
@@ -87,7 +87,7 @@ function Portfolio() {
               View Live
             </a>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
