@@ -7,14 +7,14 @@ import Img from "../assets/img/Screenshot 2026-01-21 192105.png"
 
 function Portfolio() {
   return (
-    <div className="w-full h-full px-4 md:px-16 py-8 md:py-20 flex flex-col gap-8">
+    <div className="w-full h-full md:px-16 py-8 md:py-20 flex flex-col gap-8">
       {/* TITLE */}
       <h2 className="text-3xl md:text-4xl font-bold text-center text-white">
         My <span className="text-cyan-400">Portfolio</span>
       </h2>
 
       {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-1">
         {/* BURGER KING (NOT AVAILABLE) */}
         <div className="rounded-xl overflow-hidden bg-[#1f232d] shadow-lg opacity-70">
           <img

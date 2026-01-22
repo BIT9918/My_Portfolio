@@ -108,9 +108,9 @@ function Home() {
   </a> */}
         </div>
 
-        <button className="mt-6 w-fit px-6 py-3 bg-cyan-400 text-black font-semibold rounded-full hover:bg-cyan-300 transition">
+        {/* <button className="mt-6 w-fit px-6 py-3 bg-cyan-400 text-black font-semibold rounded-full hover:bg-cyan-300 transition">
           Download CV
-        </button>
+        </button> */}
       </div>
 
       {/* RIGHT – FLOATING IMAGE */}

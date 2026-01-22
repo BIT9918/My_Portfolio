@@ -1,6 +1,12 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+  FaTelegram,
+} from "react-icons/fa";
 function Contact() {
   return (
     <div className="w-full h-full px-4 lg:px-16 py-8 md:py-10 flex flex-col gap-10">
@@ -44,7 +50,39 @@ function Contact() {
               Phnom Penh, Cambodia
             </span>
           </div>
-        </div>
+
+          {/* SOCIAL ICONS */}
+                <div className="flex gap-4 mt-4">
+                    <a
+                      href="https://web.facebook.com/profile.php?id=61560884715837"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition"
+                    >
+                      <FaFacebookF />
+                    </a>
+
+                    <a
+                      href="https://t.me/Meng_Rithy_Chey"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="@Meng_Rithy_Chey"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition"
+                    >
+                      <FaTelegram />
+                    </a>
+          
+                    <a
+                      href="https://github.com/BIT9918"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition"
+                    >
+                      <FaGithub />
+                    </a>
+          
+                  </div>
+               </div>
 
         {/* RIGHT – CONTACT FORM */}
         <form
