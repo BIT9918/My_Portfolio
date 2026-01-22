@@ -54,6 +54,7 @@ function App() {
             <NavLink to="/" className={linkClass}>Home</NavLink>
             <NavLink to="/about" className={linkClass}>About</NavLink>
             <NavLink to="/skill" className={linkClass}>Skill</NavLink>
+            {/* <NavLink to="/service" className={linkClass}>Service</NavLink> */}
             <NavLink to="/portfolio" className={linkClass}>Portfolio</NavLink>
             <NavLink to="/contact" className={linkClass}>Contact</NavLink>
           </div>
@@ -81,6 +82,7 @@ function App() {
             <NavLink onClick={() => setOpen(false)} to="/" className={linkClass}>Home</NavLink>
             <NavLink onClick={() => setOpen(false)} to="/about" className={linkClass}>About</NavLink>
             <NavLink onClick={() => setOpen(false)} to="/skill" className={linkClass}>Skill</NavLink>
+            {/* <NavLink onClick={() => setOpen(false)} to="/service" className={linkClass}>Service</NavLink> */}
             <NavLink onClick={() => setOpen(false)} to="/portfolio" className={linkClass}>Portfolio</NavLink>
             <NavLink onClick={() => setOpen(false)} to="/contact" className={linkClass}>Contact</NavLink>
           </div>
