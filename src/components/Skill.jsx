@@ -7,6 +7,7 @@ import JavaSql from "../assets/img/Java_Sql.png";
 import Python from "../assets/img/Python.png";
 import ReactJs from "../assets/img/ReactJs.png";
 
+
 function Skill() {
   const [open, setOpen] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
@@ -20,7 +21,7 @@ function Skill() {
 
   return (
     <>
-      <div className="w-full h-full px-4 md:px-16 py-8 md:py-10 flex flex-col gap-8">
+      <div className="w-full h-full px-4 md:px-16 py-41 flex flex-col gap-8">
 
         {/* TITLE */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white">

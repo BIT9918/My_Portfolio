@@ -4,10 +4,13 @@ import React from "react";
 import BurgerKing from "../assets/img/BurgerKing.png";
 import FoodShop from "../assets/img/FoodShop.png";
 import Img from "../assets/img/Screenshot 2026-01-21 192105.png"
+import Game from "../assets/img/Game.png"
+import Phone from "../assets/img/Phone.png"
+import Coffee from "../assets/img/Coffee.png"
 
 function Portfolio() {
   return (
-    <div className="w-full h-full md:px-16 py-8 md:py-20 flex flex-col gap-8">
+    <div className="w-full h-full md:px-16 py-0 flex flex-col gap-8">
       {/* TITLE */}
       <h2 className="text-3xl md:text-4xl font-bold text-center text-white">
         My <span className="text-cyan-400">Portfolio</span>
@@ -15,7 +18,7 @@ function Portfolio() {
 
       {/* GRID */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-1">
-        {/* BURGER KING (NOT AVAILABLE) */}
+        {/* BURGER KING Back-End Project (NOT AVAILABLE) */}
         <div className="rounded-xl overflow-hidden bg-[#1f232d] shadow-lg opacity-70">
           <img
             src={BurgerKing}
@@ -28,6 +31,54 @@ function Portfolio() {
             </h3>
             <p className="text-gray-400 text-sm">
               Restaurant website UI (not deployed yet).
+            </p>
+
+            <button
+              disabled
+              className="w-fit px-4 py-2 bg-gray-600 text-gray-300 rounded-full cursor-not-allowed"
+            >
+              Not Available
+            </button>
+          </div>
+        </div>
+
+        {/* Phone Back-End Project  (NOT AVAILABLE) */}
+        <div className="rounded-xl overflow-hidden bg-[#1f232d] shadow-lg opacity-70">
+          <img
+            src={Phone}
+            alt="Phone Back-End Project"
+            className="w-full h-[180px] md:h-[200px] object-cover"
+          />
+          <div className="p-4 flex flex-col gap-3 text-white">
+            <h3 className="text-lg md:text-xl font-semibold">
+              Phone Back-End Project
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Phone Management System back-end project (not deployed yet).
+            </p>
+
+            <button
+              disabled
+              className="w-fit px-4 py-2 bg-gray-600 text-gray-300 rounded-full cursor-not-allowed"
+            >
+              Not Available
+            </button>
+          </div>
+        </div>
+
+        {/* Coffee Back-End Project  (NOT AVAILABLE) */}
+        <div className="rounded-xl overflow-hidden bg-[#1f232d] shadow-lg opacity-70">
+          <img
+            src={Coffee}
+            alt="Coffee Back-End Project"
+            className="w-full h-[180px] md:h-[200px] object-cover"
+          />
+          <div className="p-4 flex flex-col gap-3 text-white">
+            <h3 className="text-lg md:text-xl font-semibold">
+              Coffee Back-End Project
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Coffee Management system back-end project (not deployed yet).
             </p>
 
             <button
@@ -88,6 +139,37 @@ function Portfolio() {
             </a>
           </div>
         </div>
+
+        {/* MY GAME (LIVE) */}
+        <div className="rounded-xl overflow-hidden bg-[#1f232d] shadow-lg hover:scale-105 transition">
+          <div className="w-full aspect-[16/9] overflow-hidden">
+            <img
+              src={Game}
+              alt="My Game Project"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="p-4 flex flex-col gap-3 text-white">
+            <h3 className="text-lg md:text-xl font-semibold">
+              My Game Website
+            </h3>
+
+            <p className="text-gray-400 text-sm">
+              My game website deployed on Vercel.
+            </p>
+
+            <a
+              href="https://mario-game-react.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit px-4 py-2 bg-cyan-400 text-black rounded-full hover:bg-cyan-300 transition"
+            >
+              View Live
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ function About() {
 
   return (
     <>
-      <div className="w-full h-full flex justify-center items-center px-4 py-15 md:px-16">
+      <div className="w-full h-full flex justify-center items-center px-4 py-55">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10">
 
           {/* LEFT – IMAGE */}
@@ -58,9 +58,7 @@ function About() {
             </h2>
 
             <p className="text-gray-400 leading-relaxed max-w-xl">
-              I am a passionate developer who enjoys building modern,
-              user-friendly web applications and continuously improving my
-              skills.
+              I am a Web Developer that can create responsive and user-friendly websites. I have experience in HTML, CSS, JavaScript, and React., Laravel ,I am passionate about learning new technologies and improving my skills to build better applications.
             </p>
 
             {/* BUTTON */}

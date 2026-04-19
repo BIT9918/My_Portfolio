@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 function Contact() {
   return (
-    <div className="w-full h-full px-4 lg:px-16 py-8 md:py-10 flex flex-col gap-10">
+    <div className="w-full h-full px-35 lg:px-16 py-48 flex flex-col gap-10">
 
       {/* TITLE */}
       <h2 className="text-3xl md:text-4xl font-bold text-center text-white">

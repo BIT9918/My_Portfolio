@@ -48,7 +48,7 @@ function Home() {
   }, [charIndex, isDeleting, textIndex]);
 
   return (
-    <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 items-center px-4 sm:px-16 py-15 gap-8 lg:gap-0">
+    <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 items-center px-4 sm:px-16 py-60 gap-8 lg:gap-0">
       {/* LEFT */}
       <div className="flex flex-col gap-6 justify-center">
         <h3 className="text-xl font-medium text-gray-300">Hello, It's Me</h3>
