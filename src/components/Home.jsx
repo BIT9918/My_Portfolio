@@ -85,7 +85,7 @@ function Home() {
       <div className="flex flex-col gap-7">
         <div className="inline-flex w-fit items-center gap-2 rounded-md border border-emerald-300/25 bg-emerald-300/10 px-3 py-2 text-sm font-semibold text-emerald-200">
           <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_18px_rgba(110,231,183,0.9)]" />
-          Available for internships and projects
+          Available for Job, internships and projects
         </div>
 
         <div className="space-y-4">
@@ -147,7 +147,7 @@ function Home() {
           >
             <FaTelegram />
           </a>
-          
+
           <a
             href="https://github.com/BIT9918"
             target="_blank"
