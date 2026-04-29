@@ -1,10 +1,16 @@
-import { FaExternalLinkAlt, FaLock, FaRocket } from "react-icons/fa";
+import { useState } from "react";
+import { FaExternalLinkAlt, FaLock, FaPlay, FaRocket, FaTimes } from "react-icons/fa";
 import BurgerKing from "../assets/img/BurgerKing.png";
 import Coffee from "../assets/img/Coffee.png";
 import FoodShop from "../assets/img/FoodShop.png";
 import Game from "../assets/img/Game.png";
 import Phone from "../assets/img/Phone.png";
 import Img from "../assets/img/Screenshot 2026-01-21 192105.png";
+import PhoneManagementSystem from "../assets/Video/phone_shop.mp4"
+import CoffeeManagementSystem from "../assets/Video/coffee.mp4"
+import shop from "../assets/Video/foodShop.mp4"
+import cv from "../assets/Video/cv.mp4"
+import Mario from "../assets/Video/Mario.mp4"
 
 const projects = [
   {
@@ -13,6 +19,7 @@ const projects = [
     image: BurgerKing,
     status: "In progress",
     tags: ["UI", "Restaurant", "Frontend"],
+    video: "",
   },
   {
     title: "Phone Management System",
@@ -20,6 +27,7 @@ const projects = [
     image: Phone,
     status: "In progress",
     tags: ["Back-End", "Database", "System"],
+    video: PhoneManagementSystem,
   },
   {
     title: "Coffee Management System",
@@ -27,6 +35,7 @@ const projects = [
     image: Coffee,
     status: "In progress",
     tags: ["Back-End", "Laravel", "System"],
+    video: CoffeeManagementSystem,
   },
   {
     title: "Food Shop Project",
@@ -35,6 +44,7 @@ const projects = [
     status: "Live",
     href: "https://food-project-psi-swart.vercel.app/",
     tags: ["React", "Vercel", "Food"],
+    video: shop,
   },
   {
     title: "My CV Website",
@@ -43,6 +53,7 @@ const projects = [
     status: "Live",
     href: "https://my-cv-webside-oifr.vercel.app/",
     tags: ["Portfolio", "CV", "Vercel"],
+    video: cv,
   },
   {
     title: "Mario Game React",
@@ -51,10 +62,13 @@ const projects = [
     status: "Live",
     href: "https://mario-game-react.vercel.app/",
     tags: ["React", "Game", "Interactive"],
+    video: Mario,
   },
 ];
 
 function Portfolio() {
+  const [activeVideo, setActiveVideo] = useState(null);
+
   return (
     <section className="flex flex-col gap-10 py-6 lg:py-10">
       <div className="grid grid-cols-1 items-end gap-6 lg:grid-cols-[1fr_auto]">
@@ -121,7 +135,7 @@ function Portfolio() {
                 ))}
               </div>
 
-              <div className="mt-auto">
+              <div className="mt-auto flex flex-wrap items-center gap-2">
                 {project.href ? (
                   <a
                     href={project.href}
@@ -136,11 +150,58 @@ function Portfolio() {
                     <FaLock /> Not Available
                   </span>
                 )}
+
+                <button
+                  onClick={() => setActiveVideo(project)}
+                  className="inline-flex items-center gap-2 rounded-md border border-purple-400/40 bg-purple-500/20 px-4 py-2 text-sm font-black text-purple-300 transition hover:border-purple-400/70 hover:bg-purple-500/30 hover:text-purple-200"
+                >
+                  <FaPlay /> Demo
+                </button>
               </div>
             </div>
           </article>
         ))}
       </div>
+
+      {activeVideo && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setActiveVideo(null)}
+        >
+          <div
+            className="relative w-full max-w-3xl mx-4 rounded-xl border border-white/10 bg-[#0d1520] p-4 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mb-3 flex items-center justify-between">
+              <h3 className="text-lg font-black text-white">
+                {activeVideo.title} — Demo
+              </h3>
+              <button
+                onClick={() => setActiveVideo(null)}
+                className="rounded-md p-2 text-slate-400 transition hover:bg-white/10 hover:text-white"
+              >
+                <FaTimes />
+              </button>
+            </div>
+
+            <div className="aspect-video w-full overflow-hidden rounded-lg bg-black">
+              {activeVideo.video ? (
+                <video
+                  src={activeVideo.video}
+                  controls
+                  autoPlay
+                  className="h-full w-full object-contain"
+                />
+              ) : (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-slate-500">
+                  <FaPlay className="text-4xl" />
+                  <p className="text-sm font-semibold">No video added yet</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
