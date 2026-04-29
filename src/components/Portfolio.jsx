@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaExternalLinkAlt, FaLock, FaPlay, FaRocket, FaTimes } from "react-icons/fa";
-import BurgerKing from "../assets/img/BurgerKing.png";
+import Car from "../assets/img/Car.png";
 import Coffee from "../assets/img/Coffee.png";
 import FoodShop from "../assets/img/FoodShop.png";
 import Game from "../assets/img/Game.png";
@@ -15,18 +15,18 @@ import Mario from "../assets/Video/Mario.mp4";
 
 const projects = [
   {
-    title: "Burger King Website",
-    description: "Restaurant website UI with product and ordering screens.",
-    image: BurgerKing,
-    status: "In progress",
-    tags: ["UI", "Restaurant", "Frontend"],
-    video: "",
+    title: "In Developing no video",
+    description: "Back-end project for car inventory and records but now in development",
+    image: Car,
+    status: "In Developing",
+    tags: ["Back-End", "Database", "System"],
+    video: "In Developing",
   },
   {
     title: "Phone Management System",
     description: "Back-end project for phone inventory and records.",
     image: Phone,
-    status: "In progress",
+    status: "Back-end No hosting",
     tags: ["Back-End", "Database", "System"],
     video: PhoneManagementSystem, 
   },
@@ -34,7 +34,7 @@ const projects = [
     title: "Coffee Management System",
     description: "Back-end project for coffee shop management workflows.",
     image: Coffee,
-    status: "In progress",
+    status: "Back-end No hosting",
     tags: ["Back-End", "Laravel", "System"],
     video: CoffeeManagementSystem, 
   },
