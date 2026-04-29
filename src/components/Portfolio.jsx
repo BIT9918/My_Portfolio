@@ -27,7 +27,7 @@ const projects = [
     image: Phone,
     status: "In progress",
     tags: ["Back-End", "Database", "System"],
-    video: PhoneManagementSystem,
+    video: {PhoneManagementSystem},
   },
   {
     title: "Coffee Management System",
@@ -35,7 +35,7 @@ const projects = [
     image: Coffee,
     status: "In progress",
     tags: ["Back-End", "Laravel", "System"],
-    video: CoffeeManagementSystem,
+    video: {CoffeeManagementSystem},
   },
   {
     title: "Food Shop Project",
@@ -44,7 +44,7 @@ const projects = [
     status: "Live",
     href: "https://food-project-psi-swart.vercel.app/",
     tags: ["React", "Vercel", "Food"],
-    video: shop,
+    video: {shop},
   },
   {
     title: "My CV Website",
@@ -53,7 +53,7 @@ const projects = [
     status: "Live",
     href: "https://my-cv-webside-oifr.vercel.app/",
     tags: ["Portfolio", "CV", "Vercel"],
-    video: cv,
+    video: {cv},
   },
   {
     title: "Mario Game React",
@@ -62,7 +62,7 @@ const projects = [
     status: "Live",
     href: "https://mario-game-react.vercel.app/",
     tags: ["React", "Game", "Interactive"],
-    video: Mario,
+    video: {Mario},
   },
 ];
 
