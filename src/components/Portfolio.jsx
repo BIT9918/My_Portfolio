@@ -10,7 +10,7 @@ import Img from "../assets/img/Screenshot 2026-01-21 192105.png";
 import PhoneManagementSystem from "../assets/Video/phone_shop.mp4";
 import CoffeeManagementSystem from "../assets/Video/Coffee.mp4"; 
 import shop from "../assets/Video/foodShop.mp4";
-import cv from "../assets/Video/cv.mp4";
+import cv from "../assets/Video/CV.mp4";
 import Mario from "../assets/Video/Mario.mp4";
 
 const projects = [
@@ -54,7 +54,7 @@ const projects = [
     status: "Live",
     href: "https://my-cv-webside-oifr.vercel.app/",
     tags: ["Portfolio", "CV", "Vercel"],
-    video: cv, 
+    video: cv,
   },
   {
     title: "Mario Game React",
