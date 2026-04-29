@@ -6,11 +6,12 @@ import FoodShop from "../assets/img/FoodShop.png";
 import Game from "../assets/img/Game.png";
 import Phone from "../assets/img/Phone.png";
 import Img from "../assets/img/Screenshot 2026-01-21 192105.png";
-import PhoneManagementSystem from "../assets/Video/phone_shop.mp4"
-import CoffeeManagementSystem from "../assets/Video/coffee.mp4"
-import shop from "../assets/Video/foodShop.mp4"
-import cv from "../assets/Video/cv.mp4"
-import Mario from "../assets/Video/Mario.mp4"
+
+import PhoneManagementSystem from "../assets/Video/phone_shop.mp4";
+import CoffeeManagementSystem from "../assets/Video/Coffee.mp4"; 
+import shop from "../assets/Video/foodShop.mp4";
+import cv from "../assets/Video/cv.mp4";
+import Mario from "../assets/Video/Mario.mp4";
 
 const projects = [
   {
@@ -27,7 +28,7 @@ const projects = [
     image: Phone,
     status: "In progress",
     tags: ["Back-End", "Database", "System"],
-    video: {PhoneManagementSystem},
+    video: PhoneManagementSystem, 
   },
   {
     title: "Coffee Management System",
@@ -35,7 +36,7 @@ const projects = [
     image: Coffee,
     status: "In progress",
     tags: ["Back-End", "Laravel", "System"],
-    video: {CoffeeManagementSystem},
+    video: CoffeeManagementSystem, 
   },
   {
     title: "Food Shop Project",
@@ -44,7 +45,7 @@ const projects = [
     status: "Live",
     href: "https://food-project-psi-swart.vercel.app/",
     tags: ["React", "Vercel", "Food"],
-    video: {shop},
+    video: shop, 
   },
   {
     title: "My CV Website",
@@ -53,7 +54,7 @@ const projects = [
     status: "Live",
     href: "https://my-cv-webside-oifr.vercel.app/",
     tags: ["Portfolio", "CV", "Vercel"],
-    video: {cv},
+    video: cv, 
   },
   {
     title: "Mario Game React",
@@ -62,7 +63,7 @@ const projects = [
     status: "Live",
     href: "https://mario-game-react.vercel.app/",
     tags: ["React", "Game", "Interactive"],
-    video: {Mario},
+    video: Mario, 
   },
 ];
 
