@@ -60,14 +60,23 @@ function About() {
   return (
     <section className="py-6 lg:py-10">
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="mx-auto w-full max-w-[420px]">
-          <div className="mb-4 h-2 rounded-lg bg-gradient-to-r from-amber-300 via-cyan-300 to-emerald-300" />
-          <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.05] p-3 shadow-[0_28px_80px_rgba(0,0,0,0.35)]">
-            <img
-              src={img}
-              alt="Meng Rithy Chey"
-              className="aspect-[4/5] w-full rounded-md object-cover"
-            />
+        <div className="mx-auto w-full max-w-[420px] flex justify-center">
+          <div className="relative group w-full aspect-square max-w-[340px] sm:max-w-[360px]">
+            {/* Soft Ambient Glow */}
+            <div className="absolute -inset-4 animate-float rounded-full bg-gradient-to-tr from-amber-500/20 via-cyan-500/15 to-emerald-500/20 blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            {/* Glowing Gradient Border Ring */}
+            <div className="relative animate-float aspect-square w-full rounded-full bg-gradient-to-tr from-amber-300 via-cyan-300 to-emerald-300 p-[5px] shadow-[0_20px_50px_rgba(34,211,238,0.2)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(110,231,183,0.35)]">
+              <div className="h-full w-full rounded-full bg-[#080b10] p-[5px]">
+                <div className="relative h-full w-full overflow-hidden rounded-full border border-white/10">
+                  <img
+                    src={img}
+                    alt="Meng Rithy Chey"
+                    className="h-full w-full object-cover object-center transition-all duration-700 hover:scale-110 filter contrast-[1.02]"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -136,12 +145,24 @@ function About() {
               </button>
             </div>
 
-            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-[220px_1fr]">
-              <img
-                src={img}
-                alt="Meng Rithy Chey"
-                className="aspect-square w-full rounded-lg object-cover"
-              />
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-[220px_1fr] items-center">
+              <div className="relative group mx-auto w-full max-w-[200px] aspect-square">
+                {/* Soft Ambient Glow */}
+                <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-cyan-500/15 via-amber-500/10 to-rose-500/15 blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Circular Gradient Border */}
+                <div className="relative aspect-square w-full rounded-full bg-gradient-to-tr from-cyan-400 via-amber-400 to-rose-400 p-[3px] shadow-lg transition-transform duration-500 hover:scale-105">
+                  <div className="h-full w-full rounded-full bg-[#101722] p-[3px]">
+                    <div className="h-full w-full overflow-hidden rounded-full border border-white/5">
+                      <img
+                        src={img}
+                        alt="Meng Rithy Chey"
+                        className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-110"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div>
                 <p className="leading-8 text-slate-300">
                   I am 20 years old and currently studying in Year 2 at Norton

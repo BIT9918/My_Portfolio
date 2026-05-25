@@ -171,16 +171,35 @@ function Home() {
       </div>
 
       <div className="flex justify-center lg:justify-end">
-        <div className="w-full max-w-[460px]">
-          <div className="mb-4 h-2 rounded-lg bg-gradient-to-r from-cyan-300 via-amber-300 to-rose-400" />
-          <div className="animate-float overflow-hidden rounded-lg border border-white/10 bg-white/[0.05] p-3 shadow-[0_28px_80px_rgba(0,0,0,0.35)]">
-            <img
-              src={img}
-              alt="Meng Rithy Chey"
-              className="aspect-[4/5] w-full rounded-md object-cover"
-            />
+        <div className="w-full max-w-[420px] flex flex-col items-center">
+          <div className="relative group w-full aspect-square max-w-[360px] sm:max-w-[380px]">
+            {/* Soft Ambient Glow */}
+            <div className="absolute -inset-4 animate-float rounded-full bg-gradient-to-tr from-cyan-500/20 via-amber-500/15 to-rose-500/20 blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            {/* Glowing Gradient Border Ring */}
+            <div className="relative animate-float aspect-square w-full rounded-full bg-gradient-to-tr from-cyan-400 via-amber-400 to-rose-400 p-[5px] shadow-[0_20px_50px_rgba(34,211,238,0.25)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(251,191,36,0.35)]">
+              <div className="h-full w-full rounded-full bg-[#080b10] p-[5px]">
+                <div className="relative h-full w-full overflow-hidden rounded-full border border-white/10">
+                  <img
+                    src={img}
+                    alt="Meng Rithy Chey"
+                    className="h-full w-full object-cover object-center transition-all duration-700 hover:scale-110 filter contrast-[1.02]"
+                  />
+                </div>
+              </div>
+
+              {/* Professional Status Badge */}
+              <div className="absolute -bottom-1 right-6 flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-[#0d121a]/95 px-3.5 py-1.5 text-[11px] font-bold text-emerald-300 shadow-[0_12px_24px_rgba(16,185,129,0.25)] backdrop-blur-md transition-transform duration-300 group-hover:scale-105 select-none">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                </span>
+                Open to Work
+              </div>
+            </div>
           </div>
-          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+
+          <div className="mt-8 w-full grid grid-cols-1 gap-3 sm:grid-cols-3">
             {focusItems.map((item) => (
               <div
                 key={item.title}

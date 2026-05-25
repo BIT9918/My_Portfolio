@@ -87,7 +87,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/[0.04] text-slate-300 transition duration-200 hover:border-cyan-300/70 hover:bg-cyan-300 hover:text-[#061017]"
+                className="grid h-10 w-10 place-items-center rounded-lg border border-white+++/10 bg-white/[0.04] text-slate-300 transition duration-200 hover:border-cyan-300/70 hover:bg-cyan-300 hover:text-[#061017]"
               >
                 {item.icon}
               </a>
@@ -131,9 +131,6 @@ function App() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-4 py-6 text-center sm:px-6 md:flex-row md:text-left lg:px-8">
           <div>
             <p className="text-sm font-semibold text-white">Meng Rithy Chey</p>
-            <p className="mt-1 text-xs text-slate-400">
-              Copyright {new Date().getFullYear()} Portfolio. Built with React.
-            </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-2 text-sm">
