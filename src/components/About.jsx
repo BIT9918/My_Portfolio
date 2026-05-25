@@ -14,7 +14,7 @@ const highlights = [
   {
     icon: <FaGraduationCap />,
     title: "Education",
-    text: "Year 2 student at Norton University.",
+    text: "Year 3 student at Norton University.",
   },
   {
     icon: <FaCode />,
@@ -165,7 +165,7 @@ function About() {
               </div>
               <div>
                 <p className="leading-8 text-slate-300">
-                  I am 20 years old and currently studying in Year 2 at Norton
+                  I am 20 years old and currently studying in Year 3 at Norton
                   University. I am interested in web development and software
                   engineering, and I enjoy learning new technologies to improve
                   my skills and build better applications.

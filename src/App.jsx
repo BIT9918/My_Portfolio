@@ -87,7 +87,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className="grid h-10 w-10 place-items-center rounded-lg border border-white+++/10 bg-white/[0.04] text-slate-300 transition duration-200 hover:border-cyan-300/70 hover:bg-cyan-300 hover:text-[#061017]"
+                className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/[0.04] text-slate-300 transition duration-200 hover:border-cyan-300/70 hover:bg-cyan-300 hover:text-[#061017]"
               >
                 {item.icon}
               </a>

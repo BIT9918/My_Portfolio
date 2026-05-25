@@ -21,7 +21,7 @@ const typedRoles = [
 const stats = [
   { value: "6+", label: "Projects" },
   { value: "5", label: "Certificates" },
-  { value: "Year 2", label: "Norton University" },
+  { value: "Year 3", label: "Norton University" },
 ];
 
 const focusItems = [
