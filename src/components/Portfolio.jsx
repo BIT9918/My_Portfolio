@@ -12,15 +12,16 @@ import CoffeeManagementSystem from "../assets/Video/Coffee.mp4";
 import shop from "../assets/Video/foodShop.mp4";
 import cv from "../assets/Video/CV.mp4";
 import Mario from "../assets/Video/Mario.mp4";
+import CarManagementSystem from "../assets/Video/Car.mp4";
 
 const projects = [
   {
-    title: "In Developing no video",
-    description: "Back-end project for car inventory and records but now in development",
+    title: "Car Management System",
+    description: "Back-end project for car inventory and records",
     image: Car,
-    status: "In Developing",
+    status: "Back-End No hosting",
     tags: ["Back-End", "Database", "System"],
-    video: "In Developing",
+    video: CarManagementSystem,
   },
   {
     title: "Phone Management System",
