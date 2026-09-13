@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaExternalLinkAlt, FaLock, FaPlay, FaRocket, FaTimes } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaLock, FaPlay, FaRocket, FaTimes } from "react-icons/fa";
 import Car from "../assets/img/Car.png";
 import Coffee from "../assets/img/Coffee.png";
 import FoodShop from "../assets/img/FoodShop.png";
@@ -16,11 +16,13 @@ import CarManagementSystem from "../assets/Video/Car.mp4";
 
 const projects = [
   {
-    title: "Car Management System",
-    description: "Back-end project for car inventory and records",
+    title: "Car Shop Management System",
+    description: "Full-stack automotive e-commerce platform with live cloud hosting, automated GPS delivery detection, dynamic ABA QR pay, printable tax invoices, and cloud inventory control.",
     image: Car,
-    status: "Back-End No hosting",
-    tags: ["Back-End", "Database", "System"],
+    status: "Full-Stack Live",
+    href: "https://car-shop-management-system-seven.vercel.app",
+    github: "https://github.com/BIT9918/Car_Shop_Management_System",
+    tags: ["Full-Stack", "React 19", "Laravel 10", "Supabase", "Cloud Hosted"],
     video: CarManagementSystem,
   },
   {
@@ -28,6 +30,7 @@ const projects = [
     description: "Back-end project for phone inventory and records.",
     image: Phone,
     status: "Back-end No hosting",
+    github: "https://github.com/BIT9918/Phone_Managment_System",
     tags: ["Back-End", "Database", "System"],
     video: PhoneManagementSystem, 
   },
@@ -36,6 +39,7 @@ const projects = [
     description: "Back-end project for coffee shop management workflows.",
     image: Coffee,
     status: "Back-end No hosting",
+    github: "https://github.com/BIT9918/Coffee_management_system",
     tags: ["Back-End", "Laravel", "System"],
     video: CoffeeManagementSystem, 
   },
@@ -45,6 +49,7 @@ const projects = [
     image: FoodShop,
     status: "Live",
     href: "https://food-project-psi-swart.vercel.app/",
+    github: "https://github.com/BIT9918/Food-Project",
     tags: ["React", "Vercel", "Food"],
     video: shop, 
   },
@@ -54,6 +59,7 @@ const projects = [
     image: Img,
     status: "Live",
     href: "https://my-cv-webside-oifr.vercel.app/",
+    github: "https://github.com/BIT9918/MyCVWebside",
     tags: ["Portfolio", "CV", "Vercel"],
     video: cv,
   },
@@ -63,6 +69,7 @@ const projects = [
     image: Game,
     status: "Live",
     href: "https://mario-game-react.vercel.app/",
+    github: "https://github.com/BIT9918/mario_game_react",
     tags: ["React", "Game", "Interactive"],
     video: Mario, 
   },
@@ -93,25 +100,36 @@ function Portfolio() {
       </div>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {projects.map((project) => (
+        {projects.map((project, idx) => (
           <article
             key={project.title}
-            className="group overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] shadow-xl transition duration-200 hover:-translate-y-1 hover:border-cyan-300/60 hover:bg-white/[0.07]"
+            style={{ animationDelay: `${idx * 75}ms` }}
+            className="group animate-fadeInUp overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:bg-white/[0.07] hover:shadow-[0_20px_45px_-12px_rgba(34,211,238,0.22)]"
           >
             <div className="relative aspect-[16/10] overflow-hidden bg-[#101722]">
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
               />
               <span
-                className={`absolute left-3 top-3 inline-flex items-center gap-2 rounded-md px-3 py-2 text-xs font-black ${
+                className={`absolute left-3 top-3 inline-flex items-center gap-2 rounded-md px-3 py-2 text-xs font-black transition-all duration-300 group-hover:scale-105 ${
                   project.href
-                    ? "bg-emerald-300 text-[#061017]"
+                    ? "bg-emerald-300 text-[#061017] shadow-[0_4px_14px_rgba(110,231,183,0.35)]"
                     : "bg-slate-950/85 text-slate-200"
                 }`}
               >
-                {project.href ? <FaRocket /> : <FaLock />}
+                {project.href ? (
+                  <>
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#061017] opacity-75"></span>
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-[#061017]"></span>
+                    </span>
+                    <FaRocket className="transition-transform duration-300 group-hover:rotate-12" />
+                  </>
+                ) : (
+                  <FaLock />
+                )}
                 {project.status}
               </span>
             </div>
@@ -143,9 +161,9 @@ function Portfolio() {
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-md bg-cyan-300 px-4 py-2 text-sm font-black text-[#061017] transition hover:bg-cyan-200"
+                    className="inline-flex items-center gap-2 rounded-md bg-cyan-300 px-4 py-2 text-sm font-black text-[#061017] shadow-[0_4px_14px_rgba(34,211,238,0.25)] transition-all duration-200 hover:bg-cyan-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_rgba(34,211,238,0.4)] active:scale-95"
                   >
-                    View Live <FaExternalLinkAlt />
+                    View Live <FaExternalLinkAlt className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 ) : (
                   <span className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-bold text-slate-400">
@@ -153,11 +171,22 @@ function Portfolio() {
                   </span>
                 )}
 
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.05] px-3.5 py-2 text-sm font-bold text-slate-200 shadow-sm transition-all duration-200 hover:border-cyan-300/60 hover:bg-white/10 hover:text-cyan-200 hover:scale-[1.03] active:scale-95"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                )}
+
                 <button
                   onClick={() => setActiveVideo(project)}
-                  className="inline-flex items-center gap-2 rounded-md border border-purple-400/40 bg-purple-500/20 px-4 py-2 text-sm font-black text-purple-300 transition hover:border-purple-400/70 hover:bg-purple-500/30 hover:text-purple-200"
+                  className="inline-flex items-center gap-2 rounded-md border border-purple-400/40 bg-purple-500/20 px-4 py-2 text-sm font-black text-purple-300 shadow-sm transition-all duration-200 hover:border-purple-400/70 hover:bg-purple-500/30 hover:text-purple-200 hover:scale-[1.03] active:scale-95"
                 >
-                  <FaPlay /> Demo
+                  <FaPlay className="text-xs" /> Demo
                 </button>
               </div>
             </div>
@@ -167,16 +196,16 @@ function Portfolio() {
 
       {activeVideo && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-md animate-fadeIn"
           onClick={() => setActiveVideo(null)}
         >
           <div
-            className="relative w-full max-w-3xl mx-4 rounded-xl border border-white/10 bg-[#0d1520] p-4 shadow-2xl"
+            className="relative w-full max-w-3xl mx-4 rounded-xl border border-white/10 bg-[#0d1520] p-4 shadow-2xl animate-scaleIn"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-3 flex items-center justify-between">
               <h3 className="text-lg font-black text-white">
-                {activeVideo.title} — Demo
+                {activeVideo.title} - Demo
               </h3>
               <button
                 onClick={() => setActiveVideo(null)}
