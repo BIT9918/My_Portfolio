@@ -156,7 +156,7 @@ function Portfolio() {
               </div>
 
               <div className="mt-auto flex flex-wrap items-center gap-2">
-                {project.href ? (
+                {project.href && (
                   <a
                     href={project.href}
                     target="_blank"
@@ -165,10 +165,6 @@ function Portfolio() {
                   >
                     View Live <FaExternalLinkAlt className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
-                ) : (
-                  <span className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-bold text-slate-400">
-                    <FaLock /> Not Available
-                  </span>
                 )}
 
                 {project.github && (
